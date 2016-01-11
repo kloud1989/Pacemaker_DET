@@ -1,0 +1,12 @@
+package.xdc
+package.xs
+package/xconfig_helloWorld.sch
+package/.vers_g180
+package/.vers_r170
+package/.vers_b150
+package/.xdc-y30
+package/xconfig_helloWorld.java
+package/xconfig_helloWorld.class
+package/package_xconfig_helloWorld.c
+package/package.defs.h
+package/xconfig_helloWorld.ccs

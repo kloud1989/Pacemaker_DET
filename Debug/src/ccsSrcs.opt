@@ -1,0 +1,1 @@
+"../src/ADS1298_drv.c" "../src/ECG_main.c" "../src/GPIO_drv.c" "../src/KeyStone_DDR_Init.c" "../src/KeyStone_SPI_Init_drv.c" "../src/KeyStone_UART_Init_drv.c" "../src/KeyStone_common.c" "../src/SPI_Intc.c" "../src/Utils.c" "../src/platform_osal.c" "../src/resourcemgr.c" "../src/tcpHello.c" 
