@@ -3,4 +3,4 @@
   package/cfg/helloWorld_pe66.oe66 \
 
 linker.cmd: package/cfg/helloWorld_pe66.xdl
-	$(SED) 's"^\"\(package/cfg/helloWorld_pe66cfg.cmd\)\"$""\"D:/CCS_PRJ/helloworld_test/.config/xconfig_helloWorld/\1\""' package/cfg/helloWorld_pe66.xdl > $@
+	$(SED) 's"^\"\(package/cfg/helloWorld_pe66cfg.cmd\)\"$""\"D:/CCS_PRJ/Pacemaker_DET/.config/xconfig_helloWorld/\1\""' package/cfg/helloWorld_pe66.xdl > $@

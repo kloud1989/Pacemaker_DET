@@ -7,7 +7,7 @@
         <srcFile name="package/cfg/helloWorld_pe66.c"/>
     </sources>
     <configscripts>
-        <srcFile name="D:/CCS_PRJ/helloworld_test/helloWorld.cfg"/>
+        <srcFile name="D:/CCS_PRJ/Pacemaker_DET/helloWorld.cfg"/>
     </configscripts>
     <makefiles>
         <srcFile name="package.mak" src="package.bld"/>
@@ -43,7 +43,7 @@
         isPartial="false"
         xCfgScript="package/cfg/helloWorld_pe66.cfg"
         xCfgPrefix="package/cfg/helloWorld_pe66"
-        cfgScript="D:/CCS_PRJ/helloworld_test/helloWorld.cfg"
+        cfgScript="D:/CCS_PRJ/Pacemaker_DET/helloWorld.cfg"
         cfgArgs="null"
         />
     </configurations>
@@ -55,7 +55,7 @@
         profile="release"
         xCfgScript="package/cfg/helloWorld_pe66.cfg"
         xCfgPrefix="package/cfg/helloWorld_pe66"
-        cfgScript="D:/CCS_PRJ/helloworld_test/helloWorld.cfg"
+        cfgScript="D:/CCS_PRJ/Pacemaker_DET/helloWorld.cfg"
         cfgArgs="null"
         />
     </executables>

@@ -1,48 +1,49 @@
 #include "ADS1298_drv.h"
 
 // command definition
-Uint8 WAKEUP 		= 0x02;
-Uint8 STANDBY 		= 0x04;
-Uint8 RESET 		= 0x06;
-Uint8 START 		= 0x08;
-Uint8 STOP 			= 0x0A;
-Uint8 RDATAC		= 0x10;
-Uint8 SDATAC		= 0x11;
-Uint8 RDATA			= 0x12;
+#define WAKEUP	(0x02)
+#define STANDBY	(0x04)
+#define RESET	(0x06)
+#define START	(0x08)
+#define STOP	(0x0A)
+#define RDATAC	(0x10)
+#define SDATAC	(0x11)
+#define RDATA	(0x12)
+
 // For RREG and WREG:
 // r rrrr = starting register address for read/write opcodes.
-// n nnnn = number of registers to be read/written ¨C 1
-Uint8 RREG			= 0x20;	// FIRST BYTE: 001r rrrr (2xh); SECOND BYTE: 000n nnnn
-Uint8 WREG			= 0x40; // FIRST BYTE: 010r rrrr (4xh); SECOND BYTE: 000n nnnn
+// n nnnn ) number of registers to be read/written ¨C 1
+#define RREG	(0x20)	// FIRST BYTE: 001r rrrr (2xh); SECOND BYTE: 000n nnnn
+#define WREG	(0x40)	// FIRST BYTE: 010r rrrr (4xh); SECOND BYTE: 000n nnnn
 
 
 // register address definition
-Uint8 ID			= 0x00;
-Uint8 CONFIG1		= 0x01;
-Uint8 CONFIG2		= 0x02;
-Uint8 CONFIG3		= 0x03;
-Uint8 LOFF			= 0x04;
-Uint8 CH1SET		= 0x05;
-Uint8 CH2SET		= 0x06;
-Uint8 CH3SET		= 0x07;
-Uint8 CH4SET		= 0x08;
-Uint8 CH5SET		= 0x09;
-Uint8 CH6SET		= 0x0A;
-Uint8 CH7SET		= 0x0B;
-Uint8 CH8SET		= 0x0C;
-Uint8 RLD_SENSP		= 0x0D;
-Uint8 RLD_SENSN		= 0x0E;
-Uint8 LOFF_SENSP	= 0x0F;
-Uint8 LOFF_SENSN	= 0x10;
-Uint8 LOFF_FLIP		= 0x11;
-Uint8 LOFF_STATP	= 0x12;
-Uint8 LOFF_STATN	= 0x13;
-Uint8 GPIO			= 0x14;
-Uint8 PACE			= 0x15;
-Uint8 RESP			= 0x16;
-Uint8 CONFIG4		= 0x17;
-Uint8 WCT1			= 0x18;
-Uint8 WCT2			= 0x19;
+#define ID			(0x00)
+#define CONFIG1		(0x01)
+#define CONFIG2		(0x02)
+#define CONFIG3		(0x03)
+#define LOFF		(0x04)
+#define CH1SET		(0x05)
+#define CH2SET		(0x06)
+#define CH3SET		(0x07)
+#define CH4SET		(0x08)
+#define CH5SET		(0x09)
+#define CH6SET		(0x0A)
+#define CH7SET		(0x0B)
+#define CH8SET		(0x0C)
+#define RLD_SENSP	(0x0D)
+#define RLD_SENSN	(0x0E)
+#define LOFF_SENSP	(0x0F)
+#define LOFF_SENSN	(0x10)
+#define LOFF_FLIP	(0x11)
+#define LOFF_STATP	(0x12)
+#define LOFF_STATN	(0x13)
+#define GPIO		(0x14)
+#define PACE		(0x15)
+#define RESP		(0x16)
+#define CONFIG4		(0x17)
+#define WCT1		(0x18)
+#define WCT2		(0x19)
 
 SPI_Data_Format ADS1298DataFormat =
 {
@@ -126,7 +127,7 @@ void Check_Reg_State()
 //	command = RDATAC;
 //	KeyStone_SPI_TxRx(&command, 0, 1, NULL, 0, 0, &ADS1298TransferParam);
 
-	platform_write(" ADS1298 Register States: \n");
+	platform_write(" ADS1298 Register States) \n");
 	for(i=0; i<25; i++)
 	{
 		platform_write("0x%02x, ", regs[i]);

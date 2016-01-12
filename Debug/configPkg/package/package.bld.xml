@@ -4,18 +4,18 @@
     <units>
     </units>
     <sources>
-        <srcFile name="package/cfg/helloWorld_pe66.c"/>
+        <srcFile name="package/cfg/Pacemaker_DET_pe66.c"/>
     </sources>
     <configscripts>
-        <srcFile name="D:/CCS_PRJ/helloworld_test/helloWorld.cfg"/>
+        <srcFile name="D:/CCS_PRJ/Pacemaker_DET/Pacemaker_DET.cfg"/>
     </configscripts>
     <makefiles>
         <srcFile name="package.mak" src="package.bld"/>
         <srcFile name="package/package.xdc.dep" src="package.xdc"/>
-        <srcFile name="package/cfg/helloWorld_pe66.mak" src="package.bld"/>
-        <srcFile name="package/cfg/helloWorld_pe66.oe66.dep" src="package/cfg/helloWorld_pe66.c"/>
-        <srcFile name="package/cfg/helloWorld_pe66.dep" src="package/cfg/helloWorld_pe66.cfg"/>
-        <srcFile name="package/cfg/helloWorld.xe66.mak" src="package.bld"/>
+        <srcFile name="package/cfg/Pacemaker_DET_pe66.mak" src="package.bld"/>
+        <srcFile name="package/cfg/Pacemaker_DET_pe66.oe66.dep" src="package/cfg/Pacemaker_DET_pe66.c"/>
+        <srcFile name="package/cfg/Pacemaker_DET_pe66.dep" src="package/cfg/Pacemaker_DET_pe66.cfg"/>
+        <srcFile name="package/cfg/Pacemaker_DET.xe66.mak" src="package.bld"/>
         <srcFile name="package/rel/configPkg.tar.dep" src="package/rel/configPkg.xdc.inc"/>
     </makefiles>
     <targets>
@@ -35,34 +35,34 @@
     <libraries>
     </libraries>
     <configurations>
-    <configuration name="helloWorld"
-        pname="helloWorld.pe66"
+    <configuration name="Pacemaker_DET"
+        pname="Pacemaker_DET.pe66"
         target="ti.targets.elf.C66"
         platform="ti.platforms.evm6678"
         profile="debug"
         isPartial="false"
-        xCfgScript="package/cfg/helloWorld_pe66.cfg"
-        xCfgPrefix="package/cfg/helloWorld_pe66"
-        cfgScript="D:/CCS_PRJ/helloworld_test/helloWorld.cfg"
+        xCfgScript="package/cfg/Pacemaker_DET_pe66.cfg"
+        xCfgPrefix="package/cfg/Pacemaker_DET_pe66"
+        cfgScript="D:/CCS_PRJ/Pacemaker_DET/Pacemaker_DET.cfg"
         cfgArgs="null"
         />
     </configurations>
     <executables>
-    <executable name="helloWorld"
-        pname="helloWorld.xe66"
+    <executable name="Pacemaker_DET"
+        pname="Pacemaker_DET.xe66"
         target="ti.targets.elf.C66"
         platform="ti.platforms.evm6678"
         profile="debug"
-        xCfgScript="package/cfg/helloWorld_pe66.cfg"
-        xCfgPrefix="package/cfg/helloWorld_pe66"
-        cfgScript="D:/CCS_PRJ/helloworld_test/helloWorld.cfg"
+        xCfgScript="package/cfg/Pacemaker_DET_pe66.cfg"
+        xCfgPrefix="package/cfg/Pacemaker_DET_pe66"
+        cfgScript="D:/CCS_PRJ/Pacemaker_DET/Pacemaker_DET.cfg"
         cfgArgs="null"
         />
     </executables>
     <tests>
-    <test exeName="helloWorld.xe66"
+    <test exeName="Pacemaker_DET.xe66"
         args=""
-        groupName="helloWorld.xe66"
+        groupName="Pacemaker_DET.xe66"
         refOutput="undefined"
         refExitCode="0"
         execArgs=""

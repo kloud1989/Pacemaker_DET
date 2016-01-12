@@ -4,7 +4,7 @@ src/KeyStone_SPI_Init_drv.obj: ../src/KeyStone_SPI_Init_drv.c
 src/KeyStone_SPI_Init_drv.obj: C:/Program\ Files/Texas\ Instruments/C6000\ Code\ Generation\ Tools\ 7.4.6/include/stdio.h
 src/KeyStone_SPI_Init_drv.obj: C:/Program\ Files/Texas\ Instruments/C6000\ Code\ Generation\ Tools\ 7.4.6/include/linkage.h
 src/KeyStone_SPI_Init_drv.obj: C:/Program\ Files/Texas\ Instruments/C6000\ Code\ Generation\ Tools\ 7.4.6/include/stdarg.h
-src/KeyStone_SPI_Init_drv.obj: ../src/KeyStone_common.h
+src/KeyStone_SPI_Init_drv.obj: D:/CCS_PRJ/Pacemaker_DET/include/KeyStone_common.h
 src/KeyStone_SPI_Init_drv.obj: C:/Program\ Files/Texas\ Instruments/C6000\ Code\ Generation\ Tools\ 7.4.6/include/c6x.h
 src/KeyStone_SPI_Init_drv.obj: C:/Program\ Files/Texas\ Instruments/C6000\ Code\ Generation\ Tools\ 7.4.6/include/vect.h
 src/KeyStone_SPI_Init_drv.obj: C:/Program\ Files/Texas\ Instruments/C6000\ Code\ Generation\ Tools\ 7.4.6/include/stdint.h
@@ -46,7 +46,7 @@ src/KeyStone_SPI_Init_drv.obj: D:/ti/pdk_C6678_1_1_2_5/packages/ti/csl/cslr_mpu.
 src/KeyStone_SPI_Init_drv.obj: D:/ti/pdk_C6678_1_1_2_5/packages/ti/csl/cslr_gpio.h
 src/KeyStone_SPI_Init_drv.obj: D:/ti/pdk_C6678_1_1_2_5/packages/ti/csl/cslr_emif4f.h
 src/KeyStone_SPI_Init_drv.obj: C:/Program\ Files/Texas\ Instruments/C6000\ Code\ Generation\ Tools\ 7.4.6/include/stdio.h
-src/KeyStone_SPI_Init_drv.obj: ../src/KeyStone_SPI_Init_drv.h
+src/KeyStone_SPI_Init_drv.obj: D:/CCS_PRJ/Pacemaker_DET/include/KeyStone_SPI_Init_drv.h
 src/KeyStone_SPI_Init_drv.obj: D:/ti/pdk_C6678_1_1_2_5/packages/ti/csl/cslr_spi.h
 src/KeyStone_SPI_Init_drv.obj: D:/ti/pdk_C6678_1_1_2_5/packages/ti/csl/csl_edma3.h
 src/KeyStone_SPI_Init_drv.obj: D:/ti/xdctools_3_23_04_60/packages/xdc/runtime/System.h
@@ -124,7 +124,7 @@ src/KeyStone_SPI_Init_drv.obj: D:/ti/xdctools_3_23_04_60/packages/xdc/runtime/pa
 C:/Program\ Files/Texas\ Instruments/C6000\ Code\ Generation\ Tools\ 7.4.6/include/stdio.h: 
 C:/Program\ Files/Texas\ Instruments/C6000\ Code\ Generation\ Tools\ 7.4.6/include/linkage.h: 
 C:/Program\ Files/Texas\ Instruments/C6000\ Code\ Generation\ Tools\ 7.4.6/include/stdarg.h: 
-../src/KeyStone_common.h: 
+D:/CCS_PRJ/Pacemaker_DET/include/KeyStone_common.h: 
 C:/Program\ Files/Texas\ Instruments/C6000\ Code\ Generation\ Tools\ 7.4.6/include/c6x.h: 
 C:/Program\ Files/Texas\ Instruments/C6000\ Code\ Generation\ Tools\ 7.4.6/include/vect.h: 
 C:/Program\ Files/Texas\ Instruments/C6000\ Code\ Generation\ Tools\ 7.4.6/include/stdint.h: 
@@ -166,7 +166,7 @@ D:/ti/pdk_C6678_1_1_2_5/packages/ti/csl/cslr_mpu.h:
 D:/ti/pdk_C6678_1_1_2_5/packages/ti/csl/cslr_gpio.h: 
 D:/ti/pdk_C6678_1_1_2_5/packages/ti/csl/cslr_emif4f.h: 
 C:/Program\ Files/Texas\ Instruments/C6000\ Code\ Generation\ Tools\ 7.4.6/include/stdio.h: 
-../src/KeyStone_SPI_Init_drv.h: 
+D:/CCS_PRJ/Pacemaker_DET/include/KeyStone_SPI_Init_drv.h: 
 D:/ti/pdk_C6678_1_1_2_5/packages/ti/csl/cslr_spi.h: 
 D:/ti/pdk_C6678_1_1_2_5/packages/ti/csl/csl_edma3.h: 
 D:/ti/xdctools_3_23_04_60/packages/xdc/runtime/System.h: 

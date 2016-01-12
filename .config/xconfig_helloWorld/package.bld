@@ -11,7 +11,7 @@ var makeAssembly = false;
 var Executable = xdc.module('xdc.bld.Executable');
 
 var exeOpts = new Executable.Attrs({
-        cfgScript: 'D:/CCS_PRJ/helloworld_test/helloWorld.cfg',
+        cfgScript: 'D:/CCS_PRJ/Pacemaker_DET/helloWorld.cfg',
         profile: 'release',
         cfgHome: 'xconfig_helloWorld',
 });
@@ -47,8 +47,8 @@ else {
 }
 
 var thisObj = {
-    cfg:        'D:/CCS_PRJ/helloworld_test/helloWorld.cfg',
-    outputPath: 'D:/CCS_PRJ/helloworld_test/.config/xconfig_helloWorld',
+    cfg:        'D:/CCS_PRJ/Pacemaker_DET/helloWorld.cfg',
+    outputPath: 'D:/CCS_PRJ/Pacemaker_DET/.config/xconfig_helloWorld',
     exeName:    'helloWorld' + suffix,
     exeIntName: 'helloWorld' + suffix.replace('.', '_'),
     targ:       targ,

@@ -124,74 +124,74 @@ package/%.xdc.inc package/%_configPkg.c package/%.defs.h: %.xdc $(PKGCFGS)
 	@$(MSG) generating interfaces for package configPkg" (because $@ is older than $(firstword $?))" ...
 	$(XSRUN) -f xdc/services/intern/cmd/build.xs $(MK_IDLOPTS) -m package/package.xdc.dep -i package/package.xdc.inc package.xdc
 
-.dlls,e66 .dlls: helloWorld.pe66
+.dlls,e66 .dlls: Pacemaker_DET.pe66
 
--include package/cfg/helloWorld_pe66.mak
--include package/cfg/helloWorld_pe66.cfg.mak
+-include package/cfg/Pacemaker_DET_pe66.mak
+-include package/cfg/Pacemaker_DET_pe66.cfg.mak
 ifeq (,$(MK_NOGENDEPS))
--include package/cfg/helloWorld_pe66.dep
+-include package/cfg/Pacemaker_DET_pe66.dep
 endif
-helloWorld.pe66: package/cfg/helloWorld_pe66.xdl
+Pacemaker_DET.pe66: package/cfg/Pacemaker_DET_pe66.xdl
 	@
 
 
 ifeq (,$(wildcard .libraries,e66))
-helloWorld.pe66 package/cfg/helloWorld_pe66.c: .libraries,e66
+Pacemaker_DET.pe66 package/cfg/Pacemaker_DET_pe66.c: .libraries,e66
 endif
 
-package/cfg/helloWorld_pe66.c package/cfg/helloWorld_pe66.h package/cfg/helloWorld_pe66.xdl: override _PROG_NAME := helloWorld.xe66
-package/cfg/helloWorld_pe66.c: package/cfg/helloWorld_pe66.cfg
+package/cfg/Pacemaker_DET_pe66.c package/cfg/Pacemaker_DET_pe66.h package/cfg/Pacemaker_DET_pe66.xdl: override _PROG_NAME := Pacemaker_DET.xe66
+package/cfg/Pacemaker_DET_pe66.c: package/cfg/Pacemaker_DET_pe66.cfg
 
 clean:: clean,e66
-	-$(RM) package/cfg/helloWorld_pe66.cfg
-	-$(RM) package/cfg/helloWorld_pe66.dep
-	-$(RM) package/cfg/helloWorld_pe66.c
-	-$(RM) package/cfg/helloWorld_pe66.xdc.inc
+	-$(RM) package/cfg/Pacemaker_DET_pe66.cfg
+	-$(RM) package/cfg/Pacemaker_DET_pe66.dep
+	-$(RM) package/cfg/Pacemaker_DET_pe66.c
+	-$(RM) package/cfg/Pacemaker_DET_pe66.xdc.inc
 
 clean,e66::
-	-$(RM) helloWorld.pe66
-.executables,e66 .executables: helloWorld.xe66
+	-$(RM) Pacemaker_DET.pe66
+.executables,e66 .executables: Pacemaker_DET.xe66
 
-helloWorld.xe66: |helloWorld.pe66
+Pacemaker_DET.xe66: |Pacemaker_DET.pe66
 
--include package/cfg/helloWorld.xe66.mak
-helloWorld.xe66: package/cfg/helloWorld_pe66.oe66 
+-include package/cfg/Pacemaker_DET.xe66.mak
+Pacemaker_DET.xe66: package/cfg/Pacemaker_DET_pe66.oe66 
 	$(RM) $@
 	@$(MSG) lnke66 $@ ...
 	$(RM) $(XDCCFGDIR)/$@.map
-	$(ti.targets.elf.C66.rootDir)/bin/lnk6x -q -u _c_int00 -fs $(XDCCFGDIR)$(dir $@).  -q -o $@ package/cfg/helloWorld_pe66.oe66   package/cfg/helloWorld_pe66.xdl --abi=eabi -c -m $(XDCCFGDIR)/$@.map -l $(ti.targets.elf.C66.rootDir)/lib/rts6600_elf.lib
+	$(ti.targets.elf.C66.rootDir)/bin/lnk6x -q -u _c_int00 -fs $(XDCCFGDIR)$(dir $@).  -q -o $@ package/cfg/Pacemaker_DET_pe66.oe66   package/cfg/Pacemaker_DET_pe66.xdl --abi=eabi -c -m $(XDCCFGDIR)/$@.map -l $(ti.targets.elf.C66.rootDir)/lib/rts6600_elf.lib
 	
-helloWorld.xe66: export C_DIR=
-helloWorld.xe66: PATH:=$(ti.targets.elf.C66.rootDir)/bin/;$(PATH)
-helloWorld.xe66: Path:=$(ti.targets.elf.C66.rootDir)/bin/;$(PATH)
+Pacemaker_DET.xe66: export C_DIR=
+Pacemaker_DET.xe66: PATH:=$(ti.targets.elf.C66.rootDir)/bin/;$(PATH)
+Pacemaker_DET.xe66: Path:=$(ti.targets.elf.C66.rootDir)/bin/;$(PATH)
 
-helloWorld.test test,e66 test: helloWorld.xe66.test
+Pacemaker_DET.test test,e66 test: Pacemaker_DET.xe66.test
 
-helloWorld.xe66.test:: helloWorld.xe66
+Pacemaker_DET.xe66.test:: Pacemaker_DET.xe66
 ifeq (,$(_TESTLEVEL))
-	@$(MAKE) -R -r --no-print-directory -f $(XDCROOT)/packages/xdc/bld/xdc.mak _TESTLEVEL=1 helloWorld.xe66.test
+	@$(MAKE) -R -r --no-print-directory -f $(XDCROOT)/packages/xdc/bld/xdc.mak _TESTLEVEL=1 Pacemaker_DET.xe66.test
 else
 	@$(MSG) running $<  ...
-	$(call EXEC.helloWorld.xe66, ) 
+	$(call EXEC.Pacemaker_DET.xe66, ) 
 endif
 
 clean,e66::
-	-$(RM) .tmp,helloWorld.xe66,0,*
+	-$(RM) .tmp,Pacemaker_DET.xe66,0,*
 
 
 clean:: clean,e66
 
 clean,e66::
-	-$(RM) helloWorld.xe66
+	-$(RM) Pacemaker_DET.xe66
 clean:: 
-	-$(RM) package/cfg/helloWorld_pe66.pjt
+	-$(RM) package/cfg/Pacemaker_DET_pe66.pjt
 %,copy:
 	@$(if $<,,$(MSG) don\'t know how to build $*; exit 1)
 	@$(MSG) cp $< $@
 	$(RM) $@
 	$(CP) $< $@
-helloWorld_pe66.oe66,copy : package/cfg/helloWorld_pe66.oe66
-helloWorld_pe66.se66,copy : package/cfg/helloWorld_pe66.se66
+Pacemaker_DET_pe66.oe66,copy : package/cfg/Pacemaker_DET_pe66.oe66
+Pacemaker_DET_pe66.se66,copy : package/cfg/Pacemaker_DET_pe66.se66
 
 $(XDCCFGDIR)%.c $(XDCCFGDIR)%.h $(XDCCFGDIR)%.xdl: $(XDCCFGDIR)%.cfg .interfaces $(XDCROOT)/packages/xdc/cfg/Main.xs
 	@$(MSG) "configuring $(_PROG_NAME) from $< ..."

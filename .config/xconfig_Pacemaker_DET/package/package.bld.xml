@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="GBK"?>
+<!--  This file conforms to the DTD xdc/bld/build.dtd -->
+<package name="xconfig_Pacemaker_DET" version="" producerId="undefined">
+    <units>
+    </units>
+    <sources>
+        <srcFile name="package/cfg/Pacemaker_DET_pe66.c"/>
+    </sources>
+    <configscripts>
+        <srcFile name="D:/CCS_PRJ/Pacemaker_DET/Pacemaker_DET.cfg"/>
+    </configscripts>
+    <makefiles>
+        <srcFile name="package.mak" src="package.bld"/>
+        <srcFile name="package/package.xdc.dep" src="package.xdc"/>
+        <srcFile name="package/cfg/Pacemaker_DET_pe66.mak" src="package.bld"/>
+        <srcFile name="package/cfg/Pacemaker_DET_pe66.oe66.dep" src="package/cfg/Pacemaker_DET_pe66.c"/>
+        <srcFile name="package/cfg/Pacemaker_DET_pe66.dep" src="package/cfg/Pacemaker_DET_pe66.cfg"/>
+        <srcFile name="package/cfg/Pacemaker_DET.xe66.mak" src="package.bld"/>
+        <srcFile name="package/rel/xconfig_Pacemaker_DET.tar.dep" src="package/rel/xconfig_Pacemaker_DET.xdc.inc"/>
+    </makefiles>
+    <targets>
+        <target name="ti.targets.elf.C66"
+            version="ti.targets.elf.C66{1,0,7.4,6"
+            platform="ti.platforms.simTCI6616"
+            isa="66"
+            suffix="e66"
+            rootDir="C:/PROGRA~1/TEXASI~2/C6000C~1.6"
+            os="undefined"
+            rts="ti.targets.rts6000">
+            <model endian="little"
+                codeModel="undefined"
+                dataModel="undefined"/>
+        </target>
+    </targets>
+    <libraries>
+    </libraries>
+    <configurations>
+    <configuration name="Pacemaker_DET"
+        pname="Pacemaker_DET.pe66"
+        target="ti.targets.elf.C66"
+        platform="ti.platforms.evm6678"
+        profile="release"
+        isPartial="false"
+        xCfgScript="package/cfg/Pacemaker_DET_pe66.cfg"
+        xCfgPrefix="package/cfg/Pacemaker_DET_pe66"
+        cfgScript="D:/CCS_PRJ/Pacemaker_DET/Pacemaker_DET.cfg"
+        cfgArgs="null"
+        />
+    </configurations>
+    <executables>
+    <executable name="Pacemaker_DET"
+        pname="Pacemaker_DET.xe66"
+        target="ti.targets.elf.C66"
+        platform="ti.platforms.evm6678"
+        profile="release"
+        xCfgScript="package/cfg/Pacemaker_DET_pe66.cfg"
+        xCfgPrefix="package/cfg/Pacemaker_DET_pe66"
+        cfgScript="D:/CCS_PRJ/Pacemaker_DET/Pacemaker_DET.cfg"
+        cfgArgs="null"
+        />
+    </executables>
+    <tests>
+    <test exeName="Pacemaker_DET.xe66"
+        args=""
+        groupName="Pacemaker_DET.xe66"
+        refOutput="undefined"
+        refExitCode="0"
+        execArgs=""
+        />
+    </tests>
+    <releases relDir="package/rel/">
+    <release name="xconfig_Pacemaker_DET"
+        pname="xconfig_Pacemaker_DET.tar"
+        label="default"
+    >
+        <file name="package/package.bld.xml"/>
+        <file name="package/package.ext.xml"/>
+        <file name="package/package.rel.dot"/>
+        <file name="package/build.cfg"/>
+        <file name="package/package.xdc.inc"/>
+    </release>
+    </releases>
+    <repositories>
+    </repositories>
+</package>

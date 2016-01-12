@@ -8,17 +8,19 @@ CG_TOOL_ROOT := C:/Program Files/Texas Instruments/C6000 Code Generation Tools 7
 
 ORDERED_OBJS += \
 $(GEN_CMDS__FLAG) \
-"./src/tcpHello.obj" \
 "./src/resourcemgr.obj" \
 "./src/platform_osal.obj" \
+"./src/main.obj" \
 "./src/Utils.obj" \
+"./src/Thread_NetworkInit.obj" \
+"./src/Thread_ADS1298Init.obj" \
+"./src/Services.obj" \
 "./src/SPI_Intc.obj" \
 "./src/KeyStone_common.obj" \
 "./src/KeyStone_UART_Init_drv.obj" \
 "./src/KeyStone_SPI_Init_drv.obj" \
 "./src/KeyStone_DDR_Init.obj" \
 "./src/GPIO_drv.obj" \
-"./src/ECG_main.obj" \
 "./src/ADS1298_drv.obj" \
 -l"libc.a" \
 -l"D:\ti\pdk_C6678_1_1_2_5\packages\ti\platform\evmc6678l\platform_lib\lib\release\ti.platform.evm6678l.ae66" \
@@ -125,22 +127,22 @@ endif
 # Add inputs and outputs from these tool invocations to the build variables 
 
 # All Target
-all: helloworld_test.out
+all: Pacemaker_DET.out
 
 # Tool invocations
-helloworld_test.out: $(OBJS) $(GEN_CMDS)
+Pacemaker_DET.out: $(OBJS) $(GEN_CMDS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: C6000 Linker'
-	"C:/Program Files/Texas Instruments/C6000 Code Generation Tools 7.4.6/bin/cl6x" -mv6600 --abi=eabi -g --diag_warning=225 -z -m"helloworld_test.map" -i"C:/Program Files/Texas Instruments/C6000 Code Generation Tools 7.4.6/lib" -i"C:/Program Files/Texas Instruments/C6000 Code Generation Tools 7.4.6/include" --reread_libs --warn_sections --rom_model -o "helloworld_test.out" $(ORDERED_OBJS)
+	"C:/Program Files/Texas Instruments/C6000 Code Generation Tools 7.4.6/bin/cl6x" -mv6600 --abi=eabi -g --diag_warning=225 -z -m"Pacemaker_DET.map" -i"C:/Program Files/Texas Instruments/C6000 Code Generation Tools 7.4.6/lib" -i"C:/Program Files/Texas Instruments/C6000 Code Generation Tools 7.4.6/include" --reread_libs --warn_sections --rom_model -o "Pacemaker_DET.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) $(GEN_SRCS__QUOTED)$(GEN_MISC_FILES__QUOTED)$(C6000_EXECUTABLE_OUTPUTS__QUOTED)$(GEN_OPTS__QUOTED)$(GEN_CMDS__QUOTED) "helloworld_test.out"
+	-$(RM) $(GEN_SRCS__QUOTED)$(GEN_MISC_FILES__QUOTED)$(C6000_EXECUTABLE_OUTPUTS__QUOTED)$(GEN_OPTS__QUOTED)$(GEN_CMDS__QUOTED) "Pacemaker_DET.out"
 	-$(RMDIR) $(GEN_MISC_DIRS__QUOTED)
-	-$(RM) "src\ADS1298_drv.pp" "src\ECG_main.pp" "src\GPIO_drv.pp" "src\KeyStone_DDR_Init.pp" "src\KeyStone_SPI_Init_drv.pp" "src\KeyStone_UART_Init_drv.pp" "src\KeyStone_common.pp" "src\SPI_Intc.pp" "src\Utils.pp" "src\platform_osal.pp" "src\resourcemgr.pp" "src\tcpHello.pp" 
-	-$(RM) "src\ADS1298_drv.obj" "src\ECG_main.obj" "src\GPIO_drv.obj" "src\KeyStone_DDR_Init.obj" "src\KeyStone_SPI_Init_drv.obj" "src\KeyStone_UART_Init_drv.obj" "src\KeyStone_common.obj" "src\SPI_Intc.obj" "src\Utils.obj" "src\platform_osal.obj" "src\resourcemgr.obj" "src\tcpHello.obj" 
+	-$(RM) "src\ADS1298_drv.pp" "src\GPIO_drv.pp" "src\KeyStone_DDR_Init.pp" "src\KeyStone_SPI_Init_drv.pp" "src\KeyStone_UART_Init_drv.pp" "src\KeyStone_common.pp" "src\SPI_Intc.pp" "src\Services.pp" "src\Thread_ADS1298Init.pp" "src\Thread_NetworkInit.pp" "src\Utils.pp" "src\main.pp" "src\platform_osal.pp" "src\resourcemgr.pp" 
+	-$(RM) "src\ADS1298_drv.obj" "src\GPIO_drv.obj" "src\KeyStone_DDR_Init.obj" "src\KeyStone_SPI_Init_drv.obj" "src\KeyStone_UART_Init_drv.obj" "src\KeyStone_common.obj" "src\SPI_Intc.obj" "src\Services.obj" "src\Thread_ADS1298Init.obj" "src\Thread_NetworkInit.obj" "src\Utils.obj" "src\main.obj" "src\platform_osal.obj" "src\resourcemgr.obj" 
 	-@echo 'Finished clean'
 	-@echo ' '
 

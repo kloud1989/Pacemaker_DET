@@ -20,9 +20,9 @@ src/KeyStone_UART_Init_drv.obj: D:/ti/pdk_C6678_1_1_2_5/packages/ti/csl/soc.h
 src/KeyStone_UART_Init_drv.obj: D:/ti/pdk_C6678_1_1_2_5/packages/ti/csl/cslr.h
 src/KeyStone_UART_Init_drv.obj: D:/ti/pdk_C6678_1_1_2_5/packages/ti/csl/cslr_device.h
 src/KeyStone_UART_Init_drv.obj: D:/ti/pdk_C6678_1_1_2_5/packages/ti/csl/cslr_tpcc.h
-src/KeyStone_UART_Init_drv.obj: ../src/KeyStone_UART_Init_drv.h
+src/KeyStone_UART_Init_drv.obj: D:/CCS_PRJ/Pacemaker_DET/include/KeyStone_UART_Init_drv.h
 src/KeyStone_UART_Init_drv.obj: D:/ti/pdk_C6678_1_1_2_5/packages/ti/csl/cslr_uart.h
-src/KeyStone_UART_Init_drv.obj: ../src/KeyStone_common.h
+src/KeyStone_UART_Init_drv.obj: D:/CCS_PRJ/Pacemaker_DET/include/KeyStone_common.h
 src/KeyStone_UART_Init_drv.obj: C:/Program\ Files/Texas\ Instruments/C6000\ Code\ Generation\ Tools\ 7.4.6/include/c6x.h
 src/KeyStone_UART_Init_drv.obj: C:/Program\ Files/Texas\ Instruments/C6000\ Code\ Generation\ Tools\ 7.4.6/include/vect.h
 src/KeyStone_UART_Init_drv.obj: D:/ti/pdk_C6678_1_1_2_5/packages/ti/csl/cslr_pllc.h
@@ -71,9 +71,9 @@ D:/ti/pdk_C6678_1_1_2_5/packages/ti/csl/soc.h:
 D:/ti/pdk_C6678_1_1_2_5/packages/ti/csl/cslr.h: 
 D:/ti/pdk_C6678_1_1_2_5/packages/ti/csl/cslr_device.h: 
 D:/ti/pdk_C6678_1_1_2_5/packages/ti/csl/cslr_tpcc.h: 
-../src/KeyStone_UART_Init_drv.h: 
+D:/CCS_PRJ/Pacemaker_DET/include/KeyStone_UART_Init_drv.h: 
 D:/ti/pdk_C6678_1_1_2_5/packages/ti/csl/cslr_uart.h: 
-../src/KeyStone_common.h: 
+D:/CCS_PRJ/Pacemaker_DET/include/KeyStone_common.h: 
 C:/Program\ Files/Texas\ Instruments/C6000\ Code\ Generation\ Tools\ 7.4.6/include/c6x.h: 
 C:/Program\ Files/Texas\ Instruments/C6000\ Code\ Generation\ Tools\ 7.4.6/include/vect.h: 
 D:/ti/pdk_C6678_1_1_2_5/packages/ti/csl/cslr_pllc.h: 

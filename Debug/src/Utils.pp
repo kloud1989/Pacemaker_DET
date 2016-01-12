@@ -1,7 +1,7 @@
 # FIXED
 
 src/Utils.obj: ../src/Utils.c
-src/Utils.obj: ../src/Utils.h
+src/Utils.obj: D:/CCS_PRJ/Pacemaker_DET/include/Utils.h
 src/Utils.obj: C:/Program\ Files/Texas\ Instruments/C6000\ Code\ Generation\ Tools\ 7.4.6/include/stdio.h
 src/Utils.obj: C:/Program\ Files/Texas\ Instruments/C6000\ Code\ Generation\ Tools\ 7.4.6/include/linkage.h
 src/Utils.obj: C:/Program\ Files/Texas\ Instruments/C6000\ Code\ Generation\ Tools\ 7.4.6/include/stdarg.h
@@ -64,9 +64,9 @@ src/Utils.obj: D:/ti/pdk_C6678_1_1_2_5/packages/ti/drv/qmss/qmss_osal.h
 src/Utils.obj: D:/ti/pdk_C6678_1_1_2_5/packages/ti/drv/pa/pa.h
 src/Utils.obj: C:/Program\ Files/Texas\ Instruments/C6000\ Code\ Generation\ Tools\ 7.4.6/include/stdlib.h
 src/Utils.obj: D:/ti/pdk_C6678_1_1_2_5/packages/ti/drv/pa/paver.h
-src/Utils.obj: ../src/KeyStone_UART_Init_drv.h
+src/Utils.obj: D:/CCS_PRJ/Pacemaker_DET/include/KeyStone_UART_Init_drv.h
 src/Utils.obj: D:/ti/pdk_C6678_1_1_2_5/packages/ti/csl/cslr_uart.h
-src/Utils.obj: ../src/KeyStone_common.h
+src/Utils.obj: D:/CCS_PRJ/Pacemaker_DET/include/KeyStone_common.h
 src/Utils.obj: C:/Program\ Files/Texas\ Instruments/C6000\ Code\ Generation\ Tools\ 7.4.6/include/c6x.h
 src/Utils.obj: D:/ti/pdk_C6678_1_1_2_5/packages/ti/csl/cslr_pllc.h
 src/Utils.obj: D:/ti/pdk_C6678_1_1_2_5/packages/ti/csl/cslr_xmc.h
@@ -92,7 +92,7 @@ src/Utils.obj: D:/ti/pdk_C6678_1_1_2_5/packages/ti/csl/cslr_emif4f.h
 src/Utils.obj: C:/Program\ Files/Texas\ Instruments/C6000\ Code\ Generation\ Tools\ 7.4.6/include/stdio.h
 
 ../src/Utils.c: 
-../src/Utils.h: 
+D:/CCS_PRJ/Pacemaker_DET/include/Utils.h: 
 C:/Program\ Files/Texas\ Instruments/C6000\ Code\ Generation\ Tools\ 7.4.6/include/stdio.h: 
 C:/Program\ Files/Texas\ Instruments/C6000\ Code\ Generation\ Tools\ 7.4.6/include/linkage.h: 
 C:/Program\ Files/Texas\ Instruments/C6000\ Code\ Generation\ Tools\ 7.4.6/include/stdarg.h: 
@@ -155,9 +155,9 @@ D:/ti/pdk_C6678_1_1_2_5/packages/ti/drv/qmss/qmss_osal.h:
 D:/ti/pdk_C6678_1_1_2_5/packages/ti/drv/pa/pa.h: 
 C:/Program\ Files/Texas\ Instruments/C6000\ Code\ Generation\ Tools\ 7.4.6/include/stdlib.h: 
 D:/ti/pdk_C6678_1_1_2_5/packages/ti/drv/pa/paver.h: 
-../src/KeyStone_UART_Init_drv.h: 
+D:/CCS_PRJ/Pacemaker_DET/include/KeyStone_UART_Init_drv.h: 
 D:/ti/pdk_C6678_1_1_2_5/packages/ti/csl/cslr_uart.h: 
-../src/KeyStone_common.h: 
+D:/CCS_PRJ/Pacemaker_DET/include/KeyStone_common.h: 
 C:/Program\ Files/Texas\ Instruments/C6000\ Code\ Generation\ Tools\ 7.4.6/include/c6x.h: 
 D:/ti/pdk_C6678_1_1_2_5/packages/ti/csl/cslr_pllc.h: 
 D:/ti/pdk_C6678_1_1_2_5/packages/ti/csl/cslr_xmc.h: 

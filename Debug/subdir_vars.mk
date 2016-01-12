@@ -4,7 +4,7 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CFG_SRCS += \
-../helloWorld.cfg 
+../Pacemaker_DET.cfg 
 
 GEN_SRCS += \
 ./configPkg/compiler.opt \
@@ -27,7 +27,7 @@ GEN_MISC_DIRS__QUOTED += \
 "configPkg\" 
 
 CFG_SRCS__QUOTED += \
-"../helloWorld.cfg" 
+"../Pacemaker_DET.cfg" 
 
 GEN_OPTS__FLAG += \
 --cmd_file="./configPkg/compiler.opt" 

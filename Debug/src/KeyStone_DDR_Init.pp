@@ -22,9 +22,9 @@ src/KeyStone_DDR_Init.obj: D:/ti/pdk_C6678_1_1_2_5/packages/ti/csl/csl_types.h
 src/KeyStone_DDR_Init.obj: D:/ti/pdk_C6678_1_1_2_5/packages/ti/csl/csl_error.h
 src/KeyStone_DDR_Init.obj: D:/ti/pdk_C6678_1_1_2_5/packages/ti/csl/cslr_bootcfg.h
 src/KeyStone_DDR_Init.obj: D:/ti/pdk_C6678_1_1_2_5/packages/ti/csl/cslr_xmc.h
-src/KeyStone_DDR_Init.obj: ../src/KeyStone_DDR_Init.h
+src/KeyStone_DDR_Init.obj: D:/CCS_PRJ/Pacemaker_DET/include/KeyStone_DDR_Init.h
 src/KeyStone_DDR_Init.obj: D:/ti/pdk_C6678_1_1_2_5/packages/ti/csl/cslr_emif4f.h
-src/KeyStone_DDR_Init.obj: ../src/KeyStone_common.h
+src/KeyStone_DDR_Init.obj: D:/CCS_PRJ/Pacemaker_DET/include/KeyStone_common.h
 src/KeyStone_DDR_Init.obj: C:/Program\ Files/Texas\ Instruments/C6000\ Code\ Generation\ Tools\ 7.4.6/include/c6x.h
 src/KeyStone_DDR_Init.obj: C:/Program\ Files/Texas\ Instruments/C6000\ Code\ Generation\ Tools\ 7.4.6/include/vect.h
 src/KeyStone_DDR_Init.obj: D:/ti/pdk_C6678_1_1_2_5/packages/ti/csl/cslr_pllc.h
@@ -72,9 +72,9 @@ D:/ti/pdk_C6678_1_1_2_5/packages/ti/csl/csl_types.h:
 D:/ti/pdk_C6678_1_1_2_5/packages/ti/csl/csl_error.h: 
 D:/ti/pdk_C6678_1_1_2_5/packages/ti/csl/cslr_bootcfg.h: 
 D:/ti/pdk_C6678_1_1_2_5/packages/ti/csl/cslr_xmc.h: 
-../src/KeyStone_DDR_Init.h: 
+D:/CCS_PRJ/Pacemaker_DET/include/KeyStone_DDR_Init.h: 
 D:/ti/pdk_C6678_1_1_2_5/packages/ti/csl/cslr_emif4f.h: 
-../src/KeyStone_common.h: 
+D:/CCS_PRJ/Pacemaker_DET/include/KeyStone_common.h: 
 C:/Program\ Files/Texas\ Instruments/C6000\ Code\ Generation\ Tools\ 7.4.6/include/c6x.h: 
 C:/Program\ Files/Texas\ Instruments/C6000\ Code\ Generation\ Tools\ 7.4.6/include/vect.h: 
 D:/ti/pdk_C6678_1_1_2_5/packages/ti/csl/cslr_pllc.h: 
