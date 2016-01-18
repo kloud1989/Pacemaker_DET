@@ -15,7 +15,9 @@ C_SRCS += \
 ../src/Thread_ADS1298Init.c \
 ../src/Thread_NetworkInit.c \
 ../src/Utils.c \
-../src/main.c 
+../src/main.c \
+../src/platform_osal.c \
+../src/resourcemgr.c 
 
 OBJS += \
 ./src/ADS1298_drv.obj \
@@ -29,7 +31,9 @@ OBJS += \
 ./src/Thread_ADS1298Init.obj \
 ./src/Thread_NetworkInit.obj \
 ./src/Utils.obj \
-./src/main.obj 
+./src/main.obj \
+./src/platform_osal.obj \
+./src/resourcemgr.obj 
 
 C_DEPS += \
 ./src/ADS1298_drv.pp \
@@ -43,7 +47,9 @@ C_DEPS += \
 ./src/Thread_ADS1298Init.pp \
 ./src/Thread_NetworkInit.pp \
 ./src/Utils.pp \
-./src/main.pp 
+./src/main.pp \
+./src/platform_osal.pp \
+./src/resourcemgr.pp 
 
 C_DEPS__QUOTED += \
 "src\ADS1298_drv.pp" \
@@ -57,7 +63,9 @@ C_DEPS__QUOTED += \
 "src\Thread_ADS1298Init.pp" \
 "src\Thread_NetworkInit.pp" \
 "src\Utils.pp" \
-"src\main.pp" 
+"src\main.pp" \
+"src\platform_osal.pp" \
+"src\resourcemgr.pp" 
 
 OBJS__QUOTED += \
 "src\ADS1298_drv.obj" \
@@ -71,7 +79,9 @@ OBJS__QUOTED += \
 "src\Thread_ADS1298Init.obj" \
 "src\Thread_NetworkInit.obj" \
 "src\Utils.obj" \
-"src\main.obj" 
+"src\main.obj" \
+"src\platform_osal.obj" \
+"src\resourcemgr.obj" 
 
 C_SRCS__QUOTED += \
 "../src/ADS1298_drv.c" \
@@ -85,6 +95,8 @@ C_SRCS__QUOTED += \
 "../src/Thread_ADS1298Init.c" \
 "../src/Thread_NetworkInit.c" \
 "../src/Utils.c" \
-"../src/main.c" 
+"../src/main.c" \
+"../src/platform_osal.c" \
+"../src/resourcemgr.c" 
 
 
