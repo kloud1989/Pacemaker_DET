@@ -8,10 +8,8 @@ CG_TOOL_ROOT := C:/Program Files/Texas Instruments/C6000 Code Generation Tools 7
 
 ORDERED_OBJS += \
 $(GEN_CMDS__FLAG) \
-"./src/dsp/gen_twiddle_fft32x32.obj" \
-"./src/dsp/gen_twiddle_fft16x32.obj" \
-"./src/dsp/gen_twiddle_fft16x16.obj" \
-"./src/dsp/fftTest.obj" \
+"./src/resourcemgr.obj" \
+"./src/platform_osal.obj" \
 "./src/main.obj" \
 "./src/Utils.obj" \
 "./src/Thread_NetworkInit.obj" \
@@ -24,8 +22,6 @@ $(GEN_CMDS__FLAG) \
 "./src/KeyStone_DDR_Init.obj" \
 "./src/GPIO_drv.obj" \
 "./src/ADS1298_drv.obj" \
-"./src/platform/resourcemgr.obj" \
-"./src/platform/platform_osal.obj" \
 -l"libc.a" \
 -l"D:\ti\pdk_C6678_1_1_2_5\packages\ti\platform\evmc6678l\platform_lib\lib\release\ti.platform.evm6678l.ae66" \
 -l"D:\ti\bios_6_33_06_50\packages\ti\sysbios\family\c66\tci66xx\lib\debug\ti.sysbios.family.c66.tci66xx.ae66" \
@@ -40,13 +36,9 @@ RMDIR := RMDIR /S/Q
 # All of the sources participating in the build are defined here
 -include sources.mk
 -include subdir_vars.mk
--include src/platform/subdir_vars.mk
 -include src/subdir_vars.mk
--include src/dsp/subdir_vars.mk
 -include subdir_rules.mk
--include src/platform/subdir_rules.mk
 -include src/subdir_rules.mk
--include src/dsp/subdir_rules.mk
 -include objects.mk
 
 ifneq ($(MAKECMDGOALS),clean)
@@ -149,8 +141,8 @@ Pacemaker_DET.out: $(OBJS) $(GEN_CMDS)
 clean:
 	-$(RM) $(GEN_SRCS__QUOTED)$(GEN_MISC_FILES__QUOTED)$(C6000_EXECUTABLE_OUTPUTS__QUOTED)$(GEN_OPTS__QUOTED)$(GEN_CMDS__QUOTED) "Pacemaker_DET.out"
 	-$(RMDIR) $(GEN_MISC_DIRS__QUOTED)
-	-$(RM) "src\platform\platform_osal.pp" "src\platform\resourcemgr.pp" "src\ADS1298_drv.pp" "src\GPIO_drv.pp" "src\KeyStone_DDR_Init.pp" "src\KeyStone_SPI_Init_drv.pp" "src\KeyStone_UART_Init_drv.pp" "src\KeyStone_common.pp" "src\SPI_Intc.pp" "src\Services.pp" "src\Thread_ADS1298Init.pp" "src\Thread_NetworkInit.pp" "src\Utils.pp" "src\main.pp" "src\dsp\fftTest.pp" "src\dsp\gen_twiddle_fft16x16.pp" "src\dsp\gen_twiddle_fft16x32.pp" "src\dsp\gen_twiddle_fft32x32.pp" 
-	-$(RM) "src\platform\platform_osal.obj" "src\platform\resourcemgr.obj" "src\ADS1298_drv.obj" "src\GPIO_drv.obj" "src\KeyStone_DDR_Init.obj" "src\KeyStone_SPI_Init_drv.obj" "src\KeyStone_UART_Init_drv.obj" "src\KeyStone_common.obj" "src\SPI_Intc.obj" "src\Services.obj" "src\Thread_ADS1298Init.obj" "src\Thread_NetworkInit.obj" "src\Utils.obj" "src\main.obj" "src\dsp\fftTest.obj" "src\dsp\gen_twiddle_fft16x16.obj" "src\dsp\gen_twiddle_fft16x32.obj" "src\dsp\gen_twiddle_fft32x32.obj" 
+	-$(RM) "src\ADS1298_drv.pp" "src\GPIO_drv.pp" "src\KeyStone_DDR_Init.pp" "src\KeyStone_SPI_Init_drv.pp" "src\KeyStone_UART_Init_drv.pp" "src\KeyStone_common.pp" "src\SPI_Intc.pp" "src\Services.pp" "src\Thread_ADS1298Init.pp" "src\Thread_NetworkInit.pp" "src\Utils.pp" "src\main.pp" "src\platform_osal.pp" "src\resourcemgr.pp" 
+	-$(RM) "src\ADS1298_drv.obj" "src\GPIO_drv.obj" "src\KeyStone_DDR_Init.obj" "src\KeyStone_SPI_Init_drv.obj" "src\KeyStone_UART_Init_drv.obj" "src\KeyStone_common.obj" "src\SPI_Intc.obj" "src\Services.obj" "src\Thread_ADS1298Init.obj" "src\Thread_NetworkInit.obj" "src\Utils.obj" "src\main.obj" "src\platform_osal.obj" "src\resourcemgr.obj" 
 	-@echo 'Finished clean'
 	-@echo ' '
 

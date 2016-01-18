@@ -341,7 +341,6 @@ src/Services.obj: D:/ti/pdk_C6678_1_1_2_5/packages/ti/csl/cslr_emif4f.h
 src/Services.obj: C:/Program\ Files/Texas\ Instruments/C6000\ Code\ Generation\ Tools\ 7.4.6/include/stdio.h
 src/Services.obj: C:/Program\ Files/Texas\ Instruments/C6000\ Code\ Generation\ Tools\ 7.4.6/include/stdio.h
 src/Services.obj: D:/CCS_PRJ/Pacemaker_DET/include/Global.h
-src/Services.obj: D:/CCS_PRJ/Pacemaker_DET/include/dsp.h
 
 ../src/Services.c: 
 D:/CCS_PRJ/Pacemaker_DET/include/Services.h: 
@@ -684,4 +683,3 @@ D:/ti/pdk_C6678_1_1_2_5/packages/ti/csl/cslr_emif4f.h:
 C:/Program\ Files/Texas\ Instruments/C6000\ Code\ Generation\ Tools\ 7.4.6/include/stdio.h: 
 C:/Program\ Files/Texas\ Instruments/C6000\ Code\ Generation\ Tools\ 7.4.6/include/stdio.h: 
 D:/CCS_PRJ/Pacemaker_DET/include/Global.h: 
-D:/CCS_PRJ/Pacemaker_DET/include/dsp.h: 
