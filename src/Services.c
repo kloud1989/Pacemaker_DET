@@ -90,7 +90,7 @@ void GetData()
 		/* Wait 10 sets of data from ADS1298_ISR(). */
 		Semaphore_pend(semDRDY, BIOS_WAIT_FOREVER);
 
-		// 获取缓冲区地址
+		// 获取数据入口地址
 		data = dataPool;
 
 		// 切换数据池

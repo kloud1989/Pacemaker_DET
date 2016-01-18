@@ -112,7 +112,7 @@ void EVM_init()
 //---------------------------------------------------------------------
 // Main Entry Point
 //---------------------------------------------------------------------
-void main()
+int main()
 {
 	(void) platform_uart_init();
 	(void) platform_uart_set_baudrate(115200);
