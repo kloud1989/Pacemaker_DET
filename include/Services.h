@@ -46,6 +46,6 @@ typedef enum STATE{
 #define CMD_LENGTH 16
 
 extern void ADS1298_ISR(UArg arg);
-extern void dtask_tcp(SOCKET sock, UINT32 unused);
+extern int dtask_tcp(SOCKET sock, UINT32 unused);
 
 #endif /* SERVICES_H_ */

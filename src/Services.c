@@ -36,10 +36,9 @@
 */
 
 #include "Services.h"
-
+#include "dsp.h"
 
 static void retrieve_data(Uint8 *data);
-static void signal_process();
 
 volatile Uint16 DRDYCount = 0;
 // TCP发送 NUM2SEND 组采样数据，足够的数据才能够进行算法处理
@@ -60,7 +59,6 @@ float *Data2Send;	//暂时只发送单通道数据
 
 // 上位机请求发送通道编号
 volatile Uint8 Channel_No = 1;
-volatile SOCKET SockInst = NULL;
 
 void ADS1298_ISR(UArg arg)
 {
@@ -212,13 +210,13 @@ Uint8 getChannelNo(char *data)
 
 }
 
-COMMAND get_command()
+COMMAND get_command(SOCKET sock)
 {
 	int ret =0;
 	char dataReceived[CMD_LENGTH] = "";
 
-//	recv(SockInst, (void *)dataReceived, CMD_LENGTH, MSG_WAITALL);
-	ret = recv(SockInst, (void *)dataReceived, CMD_LENGTH, 0);
+//	recv(sock, (void *)dataReceived, CMD_LENGTH, MSG_WAITALL);
+	ret = recv(sock, (void *)dataReceived, CMD_LENGTH, 0);
 	if(ret == 0)
 	{
 		platform_write("Client has been closed!\n");
@@ -251,11 +249,11 @@ COMMAND get_command()
 }
 
 // 检查是否收到指令
-void check_command()
+void check_command(SOCKET sock)
 {
 	COMMAND cmdFromClient = COMMAND_INVALID;
 
-	cmdFromClient = get_command();
+	cmdFromClient = get_command(sock);
 	switch(cmdFromClient)
 	{
 		case COMMAND_START:
@@ -314,18 +312,17 @@ int dtask_tcp( SOCKET sock, UINT32 unused )
     int ret;
 
     (void)unused;
-    SockInst = sock;
 
     platform_write("A connection detected! \n");
     // Configure our socket send timeout to be 1 seconds
     to.tv_sec  = 1;
     to.tv_usec = 0;
-    setsockopt( SockInst, SOL_SOCKET, SO_SNDTIMEO, &to, sizeof( to ) );
+    setsockopt( sock, SOL_SOCKET, SO_SNDTIMEO, &to, sizeof( to ) );
 
     // Configure our socket recv timeout to be 10 microseconds
     to.tv_sec  = 0;
     to.tv_usec = 10000;
-    setsockopt( SockInst, SOL_SOCKET, SO_RCVTIMEO, &to, sizeof( to ) );
+    setsockopt( sock, SOL_SOCKET, SO_RCVTIMEO, &to, sizeof( to ) );
 
     FSM_State = STATE_INIT;
     while(TRUE)
@@ -335,13 +332,13 @@ int dtask_tcp( SOCKET sock, UINT32 unused )
     	// 定时器事件
     	if(serverEvents & Event_Id_00)
     	{
-    		check_command();
+    		check_command(sock);
     	}
 
     	// 发送就绪事件
     	if(serverEvents & Event_Id_01)
     	{
-    		ret = send(SockInst, (void *)Data2Send, NUM2SEND * sizeof(float), 0);
+    		ret = send(sock, (void *)Data2Send, NUM2SEND * sizeof(float), 0);
     		if(-1 == ret)
     		{
     			platform_write("A send operation failed, %d\n", fdError());

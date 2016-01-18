@@ -20,7 +20,7 @@ ExcludeFromBuild=true
 ;  directories.
 ;
 ["Compiler" Settings: "Executable"]
-Options=-i"D:/ti/pdk_C6678_1_1_2_5/packages" -i"D:/ti/ndk_2_21_01_38/packages" -i"D:/ti/bios_6_33_06_50/packages" -i"D:/ti/mcsdk_2_01_02_05/demos" -i"D:/ti/ccsv5/ccs_base" -i"D:/ti/xdctools_3_23_04_60/packages" -i"D:\CCS_PRJ\Pacemaker_DET\Debug" 
+Options=-i"D:/ti/pdk_C6678_1_1_2_5/packages" -i"D:/ti/ndk_2_21_01_38/packages" -i"D:/ti/bios_6_33_06_50/packages" -i"D:/ti/mcsdk_2_01_02_05/demos" -i"D:/ti/ccsv5/ccs_base" -i"D:/ti/dsplib_c66x_3_1_0_0/packages" -i"D:/ti/xdctools_3_23_04_60/packages" -i"D:\CCS_PRJ\Pacemaker_DET\Debug" 
 
 [External Makefile]
 ExtMakefile=../../package.bld
